@@ -1,0 +1,39 @@
+{
+  "name": "poi-plugin-export-const-data",
+  "version": "0.0.1",
+  "description": "A plugin that exports game data to json",
+  "main": "index.es",
+  "scripts": {
+    "reset": "git clean -f && git checkout . && git submodule foreach git checkout . && git submodule foreach git clean -f",
+    "prepack": "poi-util-transpile --sm --replace",
+    "postpublish": "npm run reset"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.2.1",
+    "eslint": "^3.19.0",
+    "eslint-plugin-import": "^2.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TronPaul/poi-plugin-export-const-data.git"
+  },
+  "author": {
+    "name": "Mark McGuire",
+    "link": "https://github.com/TronPaul"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TronPaul/poi-plugin-export-const-data/issues"
+  },
+  "homepage": "https://github.com/TronPaul/poi-plugin-export-const-data",
+  "poiPlugin": {
+    "title": "Game Data Exporter",
+    "description": "Export game data to disk as json",
+    "icon": "fa/info-circle",
+    "priority": 11,
+    "apiVer": {
+      "7.2.1": "3.5.0",
+      "7.5.99": "3.6.4"
+    }
+  }
+}
